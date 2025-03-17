@@ -1,6 +1,6 @@
 [target.thumbv8m.main-none-eabihf]
-# runner = 'probe-rs run --chip-description-path .vscode/rt633s.yaml --chip MIMXRT633SFFOB'
-runner = 'probe-rs run --chip MIMXRT685SFVKB'
+runner = 'probe-rs run --chip-description-path C:\Users\jahuard\dev\rs-surface-mcu\product\rt633s.yaml --chip MIMXRT633SFFOB --probe 1366:0101:000609300765'
+# runner = 'probe-rs run --chip MIMXRT685SFVKB'
 
 rustflags = [
     "-C",

@@ -7,7 +7,9 @@
             "name": "probe_rs Debug (launch)",
             "cwd": "${workspaceFolder}",
             "runtimeExecutable": "probe-rs",
-            "chip": "MIMXRT685SFVKB",
+            "chip": "MIMXRT633SFFOB",
+            "chipDescriptionPath": "C:/Users/jahuard/dev/rs-surface-mcu/product/rt633s.yaml",
+            "probe": "1366:0101:000609300765",
             "flashingConfig": {
                 "flashingEnabled": true,
             },

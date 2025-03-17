@@ -17,6 +17,7 @@ imxrt-fcb-rt685evk = ["mimxrt685s"]
 imxrt-fcb-1spi-a1-nor = ["imxrt-fcb-1spi-nor"]
 imxrt-fcb-1spi-b1-nor = ["imxrt-fcb-1spi-nor"]
 imxrt-fcb-1spi-nor = ["imxrt"]
+imxrt-fcb-qspi-a1 = ["imxrt"]
 
 # chip variants
 mimxrt685s = ["imxrt"]

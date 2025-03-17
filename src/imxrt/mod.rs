@@ -40,6 +40,12 @@ pub fn validate_crc(app_descriptor: &AppImageDescriptor) -> bool {
     image_crc == digest.finalize()
 }
 
-pub unsafe fn raw_copy_to_ram(from: *const u32, to: *mut u32, len_words: usize) {
-    core::ptr::copy_nonoverlapping(from, to, len_words);
+pub unsafe fn raw_copy_to_ram(mut from: *const u32, mut to: *mut u32, mut len_words: usize) {
+    //core::ptr::copy_nonoverlapping(from, to, len_words);
+    while len_words > 0 {
+        *to = *from;
+        from = from.add(1);
+        to = to.add(1);
+        len_words -= 1;
+    }
 }

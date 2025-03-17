@@ -12,7 +12,7 @@ MEMORY {
 }
 
 /* link descriptors at FLASH address after __bootloader_max_size */
-__bootable_region_descriptors_address = ORIGIN(FLASH) + __bootloader_max_size;
+__bootable_region_descriptors_address = 0x08017000; /* ORIGIN(FLASH) + __bootloader_max_size; */
 
 __bootloader_max_size  = LENGTH(IRAM); /* for debug image loading */
 __bootloader_data_size = LENGTH(RAM);  /* for RAM buffering as needed */

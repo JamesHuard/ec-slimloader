@@ -17,7 +17,7 @@ fn copy_image(_app_descriptor: &AppImageDescriptor) {
         raw_copy_to_ram(
             _app_descriptor.stored_address as *const u32,
             _app_descriptor.execution_address as *mut u32,
-            _app_descriptor.execution_copy_size_bytes as usize,
+            _app_descriptor.execution_copy_size_bytes as usize / size_of::<u32>(),
         );
     }
 }
@@ -51,6 +51,8 @@ extern "C" {
 #[cortex_m_rt::pre_init]
 unsafe fn pre_init() {
     cortex_m::interrupt::disable();
+    // let a1_size = 0x40134060 as *mut u32;
+    // *a1_size = 0x0040_0000;
 }
 
 #[cortex_m_rt::entry]
