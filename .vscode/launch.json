@@ -7,14 +7,17 @@
             "name": "probe_rs Debug (launch)",
             "cwd": "${workspaceFolder}",
             "runtimeExecutable": "probe-rs",
-            "chip": "MIMXRT685SFVKB",
+            // "chip": "MIMXRT685SFVKB",
+            "chip": "MIMXRT633SFFOB",
+            "probe": "1366:0101",
+            "chipDescriptionPath": "${workspaceFolder}/../../secure-mcu/product/rt633s.yaml",
             "flashingConfig": {
                 "flashingEnabled": true,
             },
             "coreConfigs": [
                 {
                     "programBinary": "target/thumbv8m.main-none-eabihf/debug/ec-slimloader",
-                    "svdFile": ".vscode/MIMXRT685S_cm33.svd",
+                    "svdFile": "../../secure-mcu/.vscode/MIMXRT633S_cm33.svd",
                     "rttEnabled": true,
                 }
             ],

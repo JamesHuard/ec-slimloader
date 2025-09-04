@@ -8,7 +8,7 @@ MEMORY {
   CONFIG_FLASH_OTFAD : ORIGIN = 0x08000000, LENGTH = 1024
   CONFIG_FLASH_FCB   : ORIGIN = 0x08000400, LENGTH = 512
   CONFIG_FLASH_BIV   : ORIGIN = 0x08000600, LENGTH = 4
-  FLASH              : ORIGIN = 0x08001000, LENGTH = 1M
+  FLASH              : ORIGIN = 0x08001000, LENGTH = 32K
 }
 
 /* link descriptors at FLASH address after 32KB Bootloader Range */
@@ -110,7 +110,7 @@ SECTIONS
     /* === image type === */
     /* NOTE: this must be 0x000 (Plain image), as we're using the alternative "Plain Image" 
              layout for the IRAM loader here (by embedding in vtable) */
-    LONG(0x0000); /* Image Type: 0x0000 - Plain image
+    LONG(0x0001); /* Image Type: 0x0000 - Plain image
                                  0x0001 - Plain signed image
                                  0x0002 - Plain CRC image 
                                  0x0004 - Plain signed XIP image
